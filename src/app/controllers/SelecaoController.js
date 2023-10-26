@@ -4,7 +4,7 @@ class SelecaoController{
 
     async index(request,response){
         const row = await SelecaoRepository.findAll()
-        response.json(row)
+        response.status(200).json(row)
     }
     async show(request,response){
         const id = request.params.id

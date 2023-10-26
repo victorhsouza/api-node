@@ -1,8 +1,8 @@
-import app from "./src/app.js";
+import app from "./app.js";
 
 // import conexao from "./infra/conexao.js";
-
-const PORT = 3000;
+//A porta pode ser uma constante do node js que pode ser passada por algum outro servico ou porta 3000
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando no endereço http://localhost:${PORT}`);

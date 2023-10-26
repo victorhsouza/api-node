@@ -1,9 +1,12 @@
 import express from 'express'
 import cors from 'cors'
-import conexao from './app/database/conexao.js'
+import routes from './routes.js'
 
-import SelecaoController from './app/controllers/SelecaoController.js'
+
 const app = express()
+//usar o router
+
+
 
 // app.param('id',(request,response,next,id)=>{
 //     const sql = "select * from selecoes where id=?"
@@ -18,10 +21,8 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.get('/selecoes',SelecaoController.index)
-app.get('/selecoes/:id', SelecaoController.show)
-app.post('/selecoes',SelecaoController.store)
-app.delete('/selecoes/:id',SelecaoController.delete)
-app.put('/selecoes/:id',SelecaoController.update)
+app.use(routes)
+
+
 
 export default app
