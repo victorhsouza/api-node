@@ -1,0 +1,28 @@
+Passo a passo para esse projeto
+
+1 - Execute npm init -y para iniciar um novo projeto nodem
+
+2 - Crie uma pasta src onde ficarão os codigos fonte do projeto
+
+3 - instale o express que é o framework para criar uma rest api - npm install express --save
+
+4 - crie o arquivo app.js na raiz do projeto
+
+5 - Faça a importação do express no app e exporte no final do arquivo
+
+6 - Crie uma paste server na raiz importante esse app e fazendo a escuta da porta para que o servido funcione- listen
+
+7 - Instale o nodemon para que o servidor atualize automaticamente a cada alteração.  npm i nodemon -D
+
+
+8 -Para executar com o nodemon, adicione no package.json na parte de script a chave run mandando para o server - nodemon server.js. Para executar execute npm run dev
+
+9 - Para instalar o banco de dados mysql basta executa o comando npm install mysql
+
+informações importantes
+
+O cors serve para aceitar todas as origens o consumo da API
+
+para colocar no chatgpt
+
+Como criar as entidades automaticamente no banco de dados seguindo um model estabelecido em uma API JS com express
