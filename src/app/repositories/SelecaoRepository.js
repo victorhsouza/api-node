@@ -19,8 +19,7 @@ class SelecaoRepository{
 
     update(selecao,id){
         const sql = "update selecoes set ? where id=?"
-        return consult(sql,selecao,id,"Nao foi possivel atualizar")
-        
+        return consult(sql,[selecao,id],"Nao foi possivel atualizar")
     }
     delete(id){
         const sql = "delete from selecoes where id=?"

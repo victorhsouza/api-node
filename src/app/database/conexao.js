@@ -31,4 +31,14 @@ export const consult = (sql,valores='',mensagemReject)=>{
        })
 }
 
+export const verificaId = ('id',(request,response,next,id)=>{
+    const sql = "select * from selecoes where id=?"
+    conexao.query(sql,id,(error,result)=>{
+        if(result.length == 0){
+            response.status(404).json({'erro': error})
+        }
+        next()
+    })
+})
+
 export default conexao

@@ -19,12 +19,17 @@ class SelecaoController{
         
     }
     async update(request,response){
-        const id = request.params.id
-        const selecao = request.body
+        try{
+            const id = request.params.id
+            const selecao = request.body
 
-        const row = await SelecaoRepository.update(selecao,id)
+            const row = await SelecaoRepository.update(selecao,id)
 
-        response.json(row)    
+            response.json(row)    
+        }catch(erro){
+            response.status(400).json({'erro': 'deu merda'})
+        }
+        
     }
     async delete(request,response){
         const id = request.params.id
